@@ -33,7 +33,13 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
       <div>Current time: {new Date(time).toLocaleString()}</div>
 
       <p>
-        <button onClick={increment}>Click Me</button> Clicked {count} times.
+        <button
+          onClick={increment}
+          class="w-32 h-8 border-solid border-green-500 border-2"
+        >
+          Click Me
+        </button>{' '}
+        Clicked {count} times.
       </p>
     </div>
   );
