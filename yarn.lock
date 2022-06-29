@@ -8851,6 +8851,11 @@ postcss@^8.2.1, postcss@^8.2.10, postcss@^8.2.15, postcss@^8.3.5, postcss@^8.4.1
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+preact-cli-tailwind@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/preact-cli-tailwind/-/preact-cli-tailwind-3.0.0.tgz#909b3f6658028114744c63824233e515776ffea7"
+  integrity sha512-XEDT8gZbDco9Yj0OWtdMYkpaYcdiv8rcgOrn+6XDLbxzeGA2WOkUNyYWfox4FsDQvvUlJSjoLgQd1wXaI6zyAg==
+
 preact-cli@^3.0.0:
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/preact-cli/-/preact-cli-3.3.5.tgz#86b64381d9c0fd60d931e7efbdde259452b2b836"

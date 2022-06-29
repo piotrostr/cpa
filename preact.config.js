@@ -11,17 +11,15 @@ module.exports = (config, env, helpers) => {
     ],
     defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   });
-  const postCssLoaders = helpers.getLoadersByName(config, 'postcss-loader');
-
-  postCssLoaders.forEach(({ loader }) => {
-    const plugins = loader.options.postcssOptions.plugins;
-
-    plugins.unshift(require('tailwindcss'));
+  const results = helpers.getLoadersByName(config, 'postcss-loader');
+  for (const result of results) {
+    result.loader.options.postcssOptions.plugins.push(
+      require('tailwindcss')('./tailwind.config.js'),
+    );
 
     if (env.production) {
       plugins.push(purgecss);
     }
-  });
-
+  }
   return config;
 };
